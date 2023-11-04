@@ -1,5 +1,7 @@
 import { allPosts } from "@/.contentlayer/generated";
+
 import Link from "next/link";
+import { SampleCard } from "./_component/sample-card";
 
 export default function Home() {
   return (
@@ -7,9 +9,8 @@ export default function Home() {
       {allPosts.map((post) => (
         <article key={post._id}>
           <Link href={post.slug}>
-            <h2>{post.title}</h2>
+            <SampleCard post={post} />
           </Link>
-          {post.description && <p>{post.description}</p>}
         </article>
       ))}
     </div>
