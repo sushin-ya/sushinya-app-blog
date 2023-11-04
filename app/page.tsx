@@ -1,13 +1,7 @@
 import { allPosts } from "@/.contentlayer/generated";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import Link from "next/link";
+import { SampleCard } from "./_component/sample-card";
 
 export default function Home() {
   return (
@@ -15,22 +9,7 @@ export default function Home() {
       {allPosts.map((post) => (
         <article key={post._id}>
           <Link href={post.slug}>
-            <Card>
-              <CardHeader>
-                <CardTitle>
-                  <h2>{post.title}</h2>
-                </CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              {post.description && (
-                <CardContent>
-                  <p>{post.description}</p>
-                </CardContent>
-              )}
-              <CardFooter>
-                <p>Card Footer</p>
-              </CardFooter>
-            </Card>
+            <SampleCard post={post} />
           </Link>
         </article>
       ))}
