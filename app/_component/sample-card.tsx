@@ -1,6 +1,5 @@
 "use client";
 
-import { Post } from "@/.contentlayer/generated";
 import {
   Card,
   CardContent,
