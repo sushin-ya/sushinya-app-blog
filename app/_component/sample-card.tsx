@@ -11,17 +11,18 @@ import {
 } from "@/components/ui/card";
 
 type SampleCardProps = {
-  post: Post;
+  title: string;
+  description?: string | undefined;
 };
 
-export const SampleCard = ({ post }: SampleCardProps) => {
+export const SampleCard = ({ title, description }: SampleCardProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{post.title}</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <CardDescription>Card Description</CardDescription>
       </CardHeader>
-      {post.description && <CardContent>{post.description}</CardContent>}
+      {description && <CardContent>{description}</CardContent>}
       <CardFooter>
         <p>Card Footer</p>
       </CardFooter>
