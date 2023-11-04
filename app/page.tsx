@@ -9,7 +9,7 @@ export default function Home() {
       {allPosts.map((post) => (
         <article key={post._id}>
           <Link href={post.slug}>
-            <SampleCard post={post} />
+            <SampleCard {...post} />
           </Link>
         </article>
       ))}
