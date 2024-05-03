@@ -67,6 +67,57 @@ const hardware = {
   },
 };
 
+const software = {
+  vscode: {
+    imageUrl: "/uses/software/vscode.png",
+    alt: "vscode",
+    text: "VS Code",
+    description: "Editor",
+  },
+  raycast: {
+    imageUrl: "/uses/software/raycast.png",
+    alt: "raycast",
+    text: "Raycast",
+    description: "Productivity tool",
+  },
+  figma: {
+    imageUrl: "/uses/software/figma.png",
+    alt: "figma",
+    text: "Figma",
+    description: "Design tool",
+  },
+  arc: {
+    imageUrl: "/uses/software/arc.png",
+    alt: "arc",
+    text: "Arc",
+    description: "Browser",
+  },
+  notion: {
+    imageUrl: "/uses/software/notion.png",
+    alt: "notion",
+    text: "Notion",
+    description: "Todos",
+  },
+  youtubemusic: {
+    imageUrl: "/uses/software/youtubemusic.png",
+    alt: "youtubemusic",
+    text: "Youtube music",
+    description: "Music",
+  },
+  scrivener: {
+    imageUrl: "/uses/software/scrivener.png",
+    alt: "scrivener",
+    text: "Scrivener",
+    description: "Writing tool",
+  },
+  chatgpt: {
+    imageUrl: "/uses/software/chatgpt.png",
+    alt: "chatgpt",
+    text: "ChatGPT",
+    description: "Friend",
+  },
+};
+
 export default function UsesPage() {
   return (
     <section className="min-h-screen flex flex-col gap-8">
@@ -94,7 +145,7 @@ export default function UsesPage() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-y-6">
         <h2 className="font-semibold text-2xl">Hardware</h2>
         <div className="grid grid-cols-4 gap-4">
           {Object.values(hardware).map((props, index) => (
@@ -102,9 +153,13 @@ export default function UsesPage() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-y-6">
         <h2 className="font-semibold text-2xl">Software</h2>
-        <p className="leading-7">Software</p>
+        <div className="grid grid-cols-4 gap-4">
+          {Object.values(software).map((props, index) => (
+            <UsesCard {...props} key={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
