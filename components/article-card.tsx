@@ -15,6 +15,7 @@ export function ArticleCard() {
         />
       </CardContent>
       <CardFooter className="text-neutral-400 px-4 py-2">
+        {/* TODO: 具体的な時間とタグはあとでつなぎこみ */}
         <div className="flex flex-col">
           <p>2023/12/30 21:12</p>
           <div className="flex gap-1">
