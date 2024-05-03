@@ -22,7 +22,8 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "max-w-4xl flex flex-col mx-auto text-neutral-50",
+          // TODO: backgroundColorはdarkMode対応で指定の仕方変わるはず
+          "max-w-4xl flex flex-col mx-auto text-neutral-50 bg-neutral-900",
         )}
       >
         <main className="flex flex-col">
