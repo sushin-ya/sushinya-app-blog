@@ -128,7 +128,7 @@ const navigationItems = {
   },
 };
 
-export function NavigationBar() {
+export function Header() {
   return (
     <aside className="mt-5">
       <nav className="flex justify-between content-center border border-neutral-50 pl-2 pr-4 py-2">
