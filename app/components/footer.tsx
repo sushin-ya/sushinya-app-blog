@@ -31,9 +31,15 @@ export function Footer() {
         <div className="grid grid-cols-3 gap-5">
           {Object.entries(navigationItems).map(([path, { name }]) => {
             return (
-              <Link key={path} href={path} className="text-neutral-500 block">
-                {name}
-              </Link>
+              <div key={path}>
+                <Link
+                  
+                  href={path}
+                  className="text-neutral-500 inline-block"
+                >
+                  {name}
+                </Link>
+              </div>
             );
           })}
         </div>
