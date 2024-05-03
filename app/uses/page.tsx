@@ -16,6 +16,57 @@ const accessories = {
   },
 };
 
+const hardware = {
+  display: {
+    imageUrl: "/uses/hardware/display.png",
+    alt: "display",
+    text: "LG 34WP60C-B",
+    description: "UltraWide Moniter Curved",
+  },
+  chair: {
+    imageUrl: "/uses/hardware/chair.png",
+    alt: "chair",
+    text: "ITOKI KE-767GV-T1T1T1",
+    description: "Desk chair",
+  },
+  mouse: {
+    imageUrl: "/uses/hardware/mouse.png",
+    alt: "mouse",
+    text: "Logicool G G203BK",
+    description: "Mouse",
+  },
+  "keyboard-1st": {
+    imageUrl: "/uses/hardware/keyboard-1st.png",
+    alt: "keyboard-1st",
+    text: "Keychron Q1 knobK",
+    description: "1st Keyboard",
+  },
+  desk: {
+    imageUrl: "/uses/hardware/desk.png",
+    alt: "desk",
+    text: "KOKUYO STANDSIT-W",
+    description: "Desk",
+  },
+  audio: {
+    imageUrl: "/uses/hardware/audio.png",
+    alt: "audio",
+    text: "Shokz OpenRun",
+    description: "audio",
+  },
+  toy: {
+    imageUrl: "/uses/hardware/toy.png",
+    alt: "toy",
+    text: "GAN356 RS Stickerless",
+    description: "toy",
+  },
+  "keyboard-2nd": {
+    imageUrl: "/uses/hardware/keyboard-2nd.png",
+    alt: "keyboard-2nd",
+    text: "HHKB Pro Snow",
+    description: "2nd Keyboard",
+  },
+};
+
 export default function UsesPage() {
   return (
     <section className="min-h-screen flex flex-col gap-8">
@@ -45,7 +96,11 @@ export default function UsesPage() {
       </div>
       <div className="flex flex-col gap-1">
         <h2 className="font-semibold text-2xl">Hardware</h2>
-        <p className="leading-7">Hardware</p>
+        <div className="grid grid-cols-4 gap-4">
+          {Object.values(hardware).map((props, index) => (
+            <UsesCard {...props} key={index} />
+          ))}
+        </div>
       </div>
       <div className="flex flex-col gap-1">
         <h2 className="font-semibold text-2xl">Software</h2>
