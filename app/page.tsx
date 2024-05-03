@@ -1,4 +1,4 @@
-import { ArrowLink } from "@/components/ArrowLink";
+import { ArrowLink } from "@/components/arrow-link";
 
 // circle付きのアイコン
 function SushinyaIcon() {
