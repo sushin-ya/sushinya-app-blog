@@ -1,4 +1,4 @@
-import { ArrowLink } from "@/components/ArrowLink";
+import { ArrowLink } from "@/components/arrow-link";
 import { ArticleCard } from "@/components/article-card";
 import { Input } from "@/components/ui/input";
 
