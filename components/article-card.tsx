@@ -1,3 +1,10 @@
+import { Card, CardContent, CardFooter } from "./ui/card";
+
 export function ArticleCard() {
-  return <div>Article Card</div>;
+  return (
+    <Card>
+      <CardContent>画像</CardContent>
+      <CardFooter>タグとか</CardFooter>
+    </Card>
+  );
 }
