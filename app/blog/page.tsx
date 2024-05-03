@@ -19,10 +19,7 @@ export default function BlogPage() {
         {/* TODO: データを取得する実装 */}
         {Array.from({ length: 5 }).map((_, index) => {
           return (
-            // TODO: hrefはあとで実装
-            <Link href="/" key={index}>
-              <ArticleCard />
-            </Link>
+            <ArticleCard key={index} />
           );
         })}
       </div>

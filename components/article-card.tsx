@@ -6,13 +6,16 @@ export function ArticleCard() {
   return (
     <Card>
       <CardContent className="p-0">
-        <Image
-          src="/dummy.png" // TODO:　あとで修正
-          width="496"
-          height="270"
-          alt="Image"
-          className="rounded-t-md object-cover"
-        />
+        {/* // TODO: hrefはあとで実装 */}
+        <Link href="/">
+          <Image
+            src="/dummy.png" // TODO:　あとで修正
+            width="496"
+            height="270"
+            alt="Image"
+            className="rounded-t-md object-cover"
+          />
+        </Link>
       </CardContent>
       <CardFooter className="text-neutral-400 px-4 py-2">
         {/* TODO: 具体的な時間とタグはあとでつなぎこみ */}
