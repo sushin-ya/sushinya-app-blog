@@ -52,17 +52,21 @@ export default function TopPage() {
       <div className="flex flex-col gap-6">
         <SushinyaIcon />
         <div className="flex flex-col  gap-4">
-          <h1 className="text-5xl font-extrabold">
+          <h1 className="text-5xl font-extrabold cursor-default select-none">
             Sushin-ya <br />
             Blog
           </h1>
           {/* TODO: あとでリンク先を実装 */}
-          <Link href="" className="inline-block">
-            <div className="flex items-center gap-4">
-              <p>Read more about me</p>
-              <ArrowIcon />
-            </div>
-          </Link>
+          <div>
+            <Link href="" className="inline-block">
+              <div className="flex items-center gap-4">
+                <p className="underline decoration-pink-500 decoration-2">
+                  Read more about me
+                </p>
+                <ArrowIcon />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
