@@ -115,16 +115,16 @@ function Command() {
 
 const navigationItems = {
   "/blog": {
-    name: "blog",
+    name: "Blog",
   },
   "/about": {
-    name: "about",
+    name: "About",
   },
   "/uses": {
-    name: "uses",
+    name: "Uses",
   },
   "/recommend": {
-    name: "recommend",
+    name: "Recommend",
   },
 };
 
