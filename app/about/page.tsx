@@ -1,3 +1,5 @@
+import { Link } from "lucide-react";
+
 const techItems = {
   Framework: { text: "Next.js", planning: false },
   Content: { text: "MDX+Contentlayer", planning: true },
@@ -8,6 +10,15 @@ const techItems = {
   ArticleSource: { text: "Notion API", planning: true },
   Catalog: { text: "Storybook", planning: true },
   E2ETest: { text: "Chromatic", planning: true },
+};
+
+const myLinks = {
+  "https://github.com/sushin-ya": {
+    name: "GitHub",
+  },
+  "https://twitter.com/sushin_ya": {
+    name: "Twitter",
+  },
 };
 
 export default function AboutPage() {
@@ -49,6 +60,18 @@ export default function AboutPage() {
             );
           })}
         </ul>
+      </div>
+      <div className="flex flex-col gap-1">
+        <h2 className="font-semibold text-2xl">Links</h2>
+        {Object.entries(myLinks).map(([path, { name }]) => {
+          return (
+            <div key={path}>
+              <Link href={path} className="text-neutral-500 inline-block">
+                {name}
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
