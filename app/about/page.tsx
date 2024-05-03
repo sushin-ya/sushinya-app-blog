@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Timelines } from "./_components/time-lines";
 
 const techItems = {
   Framework: { text: "Next.js", planning: false },
@@ -42,8 +43,7 @@ export default function AboutPage() {
         </p>
       </div>
       <div>
-        {/* TODO: 実装 */}
-        timeline
+       <Timelines /> 
       </div>
       <div className="flex flex-col gap-1">
         <h2 className="font-semibold text-2xl">About this site</h2>
