@@ -1,4 +1,20 @@
+import { UsesCard } from "@/components/uses-card";
 import Image from "next/image";
+
+const accessories = {
+  iphone: {
+    imageUrl: "/uses/accessories/iphone.png",
+    alt: "iphone",
+    text: "iPhone 13",
+    description: "Black, 128GB",
+  },
+  ipad: {
+    imageUrl: "/uses/accessories/ipad.png",
+    alt: "ipad",
+    text: "iPad 6",
+    description: "Silver",
+  },
+};
 
 export default function UsesPage() {
   return (
@@ -19,9 +35,13 @@ export default function UsesPage() {
           <p>MacBook Air M3, 13-inch, 2024</p>
         </div>
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-y-6">
         <h2 className="font-semibold text-2xl">Accessories</h2>
-        <p className="leading-7">Accessories</p>
+        <div className="grid grid-cols-4 gap-4">
+          {Object.values(accessories).map((props, index) => (
+            <UsesCard {...props} key={index} />
+          ))}
+        </div>
       </div>
       <div className="flex flex-col gap-1">
         <h2 className="font-semibold text-2xl">Hardware</h2>
