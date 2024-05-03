@@ -26,18 +26,23 @@ const navigationItems = {
 
 export function Footer() {
   return (
-    <aside className="">
-      <nav className="">
-        <div className="">
+    <footer className="flex flex-col gap-10 pb-4">
+      <nav>
+        <div className="grid grid-cols-3 gap-5">
           {Object.entries(navigationItems).map(([path, { name }]) => {
             return (
-              <Link key={path} href={path}>
+              <Link key={path} href={path} className="text-neutral-500 block">
                 {name}
               </Link>
             );
           })}
         </div>
       </nav>
-    </aside>
+      <div className="flex flex-col text-neutral-600">
+        {/* TODO: GTM入れる */}
+        <small>This site uses Google Analytics.</small>
+        <small>&copy;2024 Sushin-ya</small>
+      </div>
+    </footer>
   );
 }
