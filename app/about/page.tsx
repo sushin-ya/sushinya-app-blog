@@ -51,7 +51,7 @@ export default function AboutPage() {
           This website has been created for the purpose of technical practice
           and validation.
         </p>
-        <ul>
+        <ul className="flex flex-col gap-1">
           {Object.entries(techItems).map(([key, { text, planning }]) => {
             return (
               <li key={key}>
