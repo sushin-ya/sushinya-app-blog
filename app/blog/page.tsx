@@ -1,3 +1,4 @@
+import { ArticleCard } from "@/components/article-card";
 import { Input } from "@/components/ui/input";
 
 export default function BlogPage() {
@@ -12,6 +13,9 @@ export default function BlogPage() {
           full-text search feature available.
         </p>
         <Input type="text" placeholder="Search articles" />
+      </div>
+      <div>
+        <ArticleCard />
       </div>
     </section>
   );

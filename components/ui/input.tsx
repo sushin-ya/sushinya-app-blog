@@ -42,7 +42,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const classPropsForSearch = "absolute pl-10";
 
     return (
-      <div className="relative">
+      <div className="relative h-[40px]">
         <input
           type={type}
           className={cn(defaultClassProps, classPropsForSearch, className)}
