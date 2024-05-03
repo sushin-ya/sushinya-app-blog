@@ -1,4 +1,4 @@
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 const techItems = {
   Framework: { text: "Next.js", planning: false },
@@ -66,9 +66,7 @@ export default function AboutPage() {
         {Object.entries(myLinks).map(([path, { name }]) => {
           return (
             <div key={path}>
-              <Link href={path} className="text-neutral-500 inline-block">
-                {name}
-              </Link>
+              <Link href={path}>{name}</Link>
             </div>
           );
         })}
