@@ -1,3 +1,15 @@
+const techItems = {
+  Framework: { text: "Next.js", planning: false },
+  Content: { text: "MDX+Contentlayer", planning: true },
+  Analytics: { text: "Google Analytics", planning: true },
+  Styling: { text: "Tailwindcss+Shadcn/ui", planning: false },
+  Database: { text: "planningetscale", planning: true },
+  CMS: { text: "microCMS", planning: true },
+  ArticleSource: { text: "Notion API", planning: true },
+  Catalog: { text: "Storybook", planning: true },
+  E2ETest: { text: "Chromatic", planning: true },
+};
+
 export default function AboutPage() {
   return (
     <section className="min-h-screen flex flex-col gap-8">
@@ -5,7 +17,7 @@ export default function AboutPage() {
         <h1 className="font-semibold text-3xl">About</h1>
         <p className="leading-7">👋 Hi! I&apos;m sushin-ya 🍣 🐈</p>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1">
         <h2 className="font-semibold text-2xl">WHO AM I</h2>
         <p className="leading-7">
           I am a front-end engineer in Tokyo. I usually work on developing web
@@ -17,6 +29,26 @@ export default function AboutPage() {
           the evolution of the front-end ecosystem. It has become almost like a
           hobby for me.
         </p>
+      </div>
+      <div>
+        {/* TODO: 実装 */}
+        timeline
+      </div>
+      <div className="flex flex-col gap-1">
+        <h2 className="font-semibold text-2xl">About this site</h2>
+        <p className="leading-7">
+          This website has been created for the purpose of technical practice
+          and validation.
+        </p>
+        <ul>
+          {Object.entries(techItems).map(([key, { text, planning }]) => {
+            return (
+              <li key={key}>
+                {planning ? `${key}: ${text}(planning)` : `${key}: ${text}`}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
