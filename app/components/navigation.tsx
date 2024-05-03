@@ -144,9 +144,11 @@ export function NavigationBar() {
             );
           })}
           <div className="flex flex-wrap content-center">
+            {/* TODO: Darkmode対応をすること */}
             <Sun />
           </div>
           <div className="flex flex-wrap content-center">
+            {/* TODO: Command対応をすること */}
             <Command />
           </div>
         </div>
