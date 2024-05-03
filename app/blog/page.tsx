@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 
 export default function BlogPage() {
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen flex flex-col gap-8">
       <div className="flex flex-col gap-4 mt-16">
         <h1 className="font-semibold text-3xl">Blog</h1>
         {/* TODO: 全文検索機能 */}
