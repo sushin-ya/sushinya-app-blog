@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { NavigationBar } from "./components/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cx(
-          inter.className,
-          "max-w-4xl flex flex-col mx-auto",
-        )}
-      >
+      <body className={cx(inter.className, "max-w-4xl flex flex-col mx-auto text-neutral-50")}>
         <main className="flex flex-col">
+          <NavigationBar />
           {children}
         </main>
       </body>
