@@ -1,3 +1,4 @@
+import { ArrowLink } from "@/components/ArrowLink";
 import { ArticleCard } from "@/components/article-card";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
@@ -18,10 +19,12 @@ export default function BlogPage() {
       <div className="grid grid-cols-2 gap-8">
         {/* TODO: データを取得する実装 */}
         {Array.from({ length: 5 }).map((_, index) => {
-          return (
-            <ArticleCard key={index} />
-          );
+          return <ArticleCard key={index} />;
         })}
+      </div>
+      <div>
+        {/* TODO: blog/listみたいなのを作る？ */}
+        <ArrowLink text="All Post" href="/" />
       </div>
     </section>
   );
