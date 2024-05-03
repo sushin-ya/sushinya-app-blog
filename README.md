@@ -1,4 +1,4 @@
-sushinya-app-blog🤗  
+sushinya-app-blog🤗
 
 ```
 nr dev
