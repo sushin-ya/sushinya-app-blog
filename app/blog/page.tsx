@@ -1,3 +1,5 @@
+import { Input } from "@/components/ui/input";
+
 export default function BlogPage() {
   return (
     <section className="min-h-screen">
@@ -8,6 +10,7 @@ export default function BlogPage() {
           management, book reviews, and diary entries. Additionally, there is a
           full-text search feature available.
         </p>
+        <Input type="text" placeholder="Search articles" />
       </div>
     </section>
   );
