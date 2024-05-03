@@ -1,3 +1,4 @@
+import { ArrowLink } from "@/components/ArrowLink";
 import Link from "next/link";
 
 // circle付きのアイコン
@@ -58,14 +59,7 @@ export default function TopPage() {
           </h1>
           {/* TODO: あとでリンク先を実装 */}
           <div>
-            <Link href="" className="inline-block">
-              <div className="flex items-center gap-4">
-                <p className="underline decoration-pink-500 decoration-2">
-                  Read more about me
-                </p>
-                <ArrowIcon />
-              </div>
-            </Link>
+            <ArrowLink text="Read more about me" href="/about" hasDecoration />
           </div>
         </div>
       </div>
