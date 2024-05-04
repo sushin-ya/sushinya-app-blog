@@ -29,7 +29,6 @@ export default function TopPage() {
             Sushin-ya <br />
             Blog
           </h1>
-          {/* TODO: あとでリンク先を実装 */}
           <div>
             <ArrowLink text="Read more about me" href="/about" hasDecoration />
           </div>
