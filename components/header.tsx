@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Menu } from "./menu";
+import { navigationItems } from "@/constants/navigations";
 
 function SushinyaIcon() {
   return (
@@ -113,21 +114,6 @@ function Command() {
     </svg>
   );
 }
-
-const navigationItems = {
-  "/blog": {
-    name: "Blog",
-  },
-  "/about": {
-    name: "About",
-  },
-  "/uses": {
-    name: "Uses",
-  },
-  "/recommend": {
-    name: "Recommend",
-  },
-};
 
 export function Header() {
   return (

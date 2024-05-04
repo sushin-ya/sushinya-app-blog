@@ -1,9 +1,11 @@
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { navigationItems } from "@/constants/navigations";
 
 function MenuIcon() {
   return (
@@ -45,11 +47,17 @@ export function Menu() {
       <DropdownMenuTrigger asChild>
         <MenuIcon />
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-52">
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+      <DropdownMenuContent
+        align="end"
+        className="min-w-52 bg-neutral-900 border border-neutral-700 text-neutral-50"
+      >
+        {Object.entries(navigationItems).map(([path, { name }]) => {
+          return (
+            <DropdownMenuItem key={path}>
+              <Link href={path}>{name}</Link>
+            </DropdownMenuItem>
+          );
+        })}
       </DropdownMenuContent>
     </DropdownMenu>
   );
