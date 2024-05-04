@@ -21,7 +21,7 @@ function SushinyaIcon() {
 
 export default function TopPage() {
   return (
-    <div className="min-h-screen flex flex-col justify-center">
+    <main className="min-h-screen flex flex-col justify-center px-4 lg:px-0">
       <div className="flex flex-col gap-6">
         <SushinyaIcon />
         <div className="flex flex-col  gap-4">
@@ -34,6 +34,6 @@ export default function TopPage() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
