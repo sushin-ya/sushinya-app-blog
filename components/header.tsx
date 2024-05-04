@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Menu } from "./menu";
+import { navigationItems } from "@/constants/navigations";
 
 function SushinyaIcon() {
   return (
@@ -113,24 +115,9 @@ function Command() {
   );
 }
 
-const navigationItems = {
-  "/blog": {
-    name: "Blog",
-  },
-  "/about": {
-    name: "About",
-  },
-  "/uses": {
-    name: "Uses",
-  },
-  "/recommend": {
-    name: "Recommend",
-  },
-};
-
 export function Header() {
   return (
-    <header className="mt-5">
+    <header className="mt-5 px-4 md:px-0">
       <nav className="flex justify-between content-center border border-neutral-50 pl-2 pr-4 py-2">
         <Link href="/">
           <SushinyaIcon />
@@ -138,7 +125,7 @@ export function Header() {
         <div className="flex flex-row gap-4 text-sm leading-8">
           {Object.entries(navigationItems).map(([path, { name }]) => {
             return (
-              <Link key={path} href={path}>
+              <Link key={path} href={path} className="hidden md:block">
                 {name}
               </Link>
             );
@@ -150,6 +137,10 @@ export function Header() {
           <div className="flex flex-wrap content-center">
             {/* TODO: Command対応をすること */}
             <Command />
+          </div>
+          <div className="flex flex-wrap content-center">
+            {/* TODO: Command対応をすること */}
+            <Menu />
           </div>
         </div>
       </nav>

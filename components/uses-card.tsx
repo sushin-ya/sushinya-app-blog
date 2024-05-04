@@ -10,9 +10,9 @@ type UsesCardProps = {
 
 export function UsesCard({ imageUrl, alt, text, description }: UsesCardProps) {
   return (
-    <Card className="bg-neutral-900">
-      <CardHeader>
-        <Image src={imageUrl} width="175" height="175" alt={alt} />
+    <Card className="bg-neutral-900 flex flex-row items-center">
+      <CardHeader >
+        <Image src={imageUrl} width="175" height="175" alt={alt} className="w-[96px] h-[96px]" />
       </CardHeader>
       <CardFooter className="flex flex-col items-start gap-2">
         <p className="text-lg">{text}</p>

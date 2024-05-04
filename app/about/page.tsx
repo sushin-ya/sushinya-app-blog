@@ -24,7 +24,7 @@ const myLinks = {
 
 export default function AboutPage() {
   return (
-    <section className="min-h-screen flex flex-col gap-8">
+    <section className="min-h-screen flex flex-col gap-8 px-4 lg:px-0">
       <div className="flex flex-col gap-4 mt-16">
         <h1 className="font-semibold text-3xl">About</h1>
         <p className="leading-7">👋 Hi! I&apos;m sushin-ya 🍣 🐈</p>

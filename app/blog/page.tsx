@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 export default function BlogPage() {
   return (
-    <section className="min-h-screen flex flex-col gap-8">
+    <section className="min-h-screen flex flex-col gap-8 px-4 lg:px-0">
       <div className="flex flex-col gap-4 mt-16">
         <h1 className="font-semibold text-3xl">Blog</h1>
         {/* TODO: 全文検索機能 */}
@@ -15,7 +15,7 @@ export default function BlogPage() {
         </p>
         <Input type="text" placeholder="Search articles" />
       </div>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* TODO: データを取得する実装 */}
         {Array.from({ length: 4 }).map((_, index) => {
           return <ArticleCard key={index} />;

@@ -26,7 +26,7 @@ const navigationItems = {
 
 export function Footer() {
   return (
-    <footer className="flex flex-col gap-10 pt-20 pb-4">
+    <footer className="flex flex-col gap-10 pt-20 pb-4 px-4 lg:px-0">
       <nav>
         <div className="grid grid-cols-3 gap-5">
           {Object.entries(navigationItems).map(([path, { name }]) => {
