@@ -93,6 +93,40 @@ function Sun() {
   );
 }
 
+function Menu() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 12H20"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4 6H20"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4 18H20"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function Command() {
   return (
     <svg
@@ -138,7 +172,7 @@ export function Header() {
         <div className="flex flex-row gap-4 text-sm leading-8">
           {Object.entries(navigationItems).map(([path, { name }]) => {
             return (
-              <Link key={path} href={path}>
+              <Link key={path} href={path} className="hidden md:block">
                 {name}
               </Link>
             );
@@ -150,6 +184,10 @@ export function Header() {
           <div className="flex flex-wrap content-center">
             {/* TODO: Command対応をすること */}
             <Command />
+          </div>
+          <div className="flex flex-wrap content-center">
+            {/* TODO: Command対応をすること */}
+            <Menu />
           </div>
         </div>
       </nav>
