@@ -23,7 +23,7 @@ export default function RootLayout({
         className={cn(
           inter.className,
           // TODO: backgroundColorはdarkMode対応で指定の仕方変わるはず
-          "max-w-4xl flex flex-col mx-auto text-neutral-50 bg-black",
+          "max-w-4xl flex flex-col mx-auto text-neutral-50 bg-black px-4 lg:px-0",
         )}
       >
         <main className="flex flex-col">
