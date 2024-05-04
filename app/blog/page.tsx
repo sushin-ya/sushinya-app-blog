@@ -15,7 +15,7 @@ export default function BlogPage() {
         </p>
         <Input type="text" placeholder="Search articles" />
       </div>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* TODO: データを取得する実装 */}
         {Array.from({ length: 4 }).map((_, index) => {
           return <ArticleCard key={index} />;
