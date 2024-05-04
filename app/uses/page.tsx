@@ -139,7 +139,7 @@ export default function UsesPage() {
       </div>
       <div className="flex flex-col gap-y-6">
         <h2 className="font-semibold text-2xl">Accessories</h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {Object.values(accessories).map((props, index) => (
             <UsesCard {...props} key={index} />
           ))}
@@ -147,7 +147,7 @@ export default function UsesPage() {
       </div>
       <div className="flex flex-col gap-y-6">
         <h2 className="font-semibold text-2xl">Hardware</h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {Object.values(hardware).map((props, index) => (
             <UsesCard {...props} key={index} />
           ))}
@@ -155,7 +155,7 @@ export default function UsesPage() {
       </div>
       <div className="flex flex-col gap-y-6">
         <h2 className="font-semibold text-2xl">Software</h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {Object.values(software).map((props, index) => (
             <UsesCard {...props} key={index} />
           ))}
